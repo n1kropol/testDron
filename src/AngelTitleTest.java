@@ -15,10 +15,13 @@ import java.util.List;
  */
 @RunWith(JUnit4.class)
 public class AngelTitleTest {
-    public static WebDriver h;
+    public static WebDriver driver;
     @Before
     public void doBefore(){
-        TestHelperPassw.init();
+//        TestHelperPassw.init();
+        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+        driver = new ChromeDriver();
+        driver.get("http://angel.net/~nic/passwd.current.html");
     }
 
     @Test
@@ -32,7 +35,8 @@ public class AngelTitleTest {
 
     @After
     public void clean(){
-        TestHelperPassw.driver.quit();
+        //TestHelperPassw.driver.quit();
+        driver.quit();
     }
 }
 
