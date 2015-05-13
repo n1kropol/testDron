@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import org.openqa.selenium.*;
 
-public class forDron {
+public class AngelTitleTest {
 @Test
     public void test1(){
         WebDriver driver;
